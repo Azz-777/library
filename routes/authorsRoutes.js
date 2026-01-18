@@ -1,0 +1,16 @@
+import { Router } from "express";
+import {
+  getAuthors,
+  createAuthor,
+  updateAuthor,
+  deleteAuthor
+} from "../controllers/authorCcontroller.js";
+
+const router = Router();
+
+router.get("/", getAuthors);
+router.post("/", createAuthor);
+router.put("/:id", updateAuthor);
+router.delete("/:id", deleteAuthor);
+
+export default router;
